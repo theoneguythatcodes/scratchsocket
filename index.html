@@ -1,1 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>ScratchSocket</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f7fa;
+        }
+
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #111827, #2563eb);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        .socket-card {
+            transition: 0.2s;
+        }
+
+        .socket-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .architecture {
+            background: #111827;
+            color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+
+        footer {
+            background: #111827;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            ⚡ ScratchSocket
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#arquitectura">Arquitectura</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#caracteristicas">Características</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#documentacion">Documentación</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <span class="badge bg-primary mb-3">
+                    WebSocket • Scratch • Networking
+                </span>
+
+                <h1>ScratchSocket</h1>
+
+                <p class="lead mt-3">
+                    Comunicación en tiempo real entre proyectos de Scratch
+                    y servidores mediante WebSockets.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="#arquitectura"
+                       class="btn btn-light btn-lg me-2">
+                        Ver arquitectura
+                    </a>
+
+                    <a href="#documentacion"
+                       class="btn btn-outline-light btn-lg">
+                        Documentación
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5 mt-5 mt-lg-0">
+
+                <div class="card bg-dark text-white shadow-lg">
+                    <div class="card-body p-4">
+
+                        <h5 class="card-title">
+                            Estado de ScratchSocket
+                        </h5>
+
+                        <div class="d-flex align-items-center mt-3">
+                            <span
+                                class="bg-success rounded-circle me-2"
+                                style="width:12px;height:12px;">
+                            </span>
+
+                            <span>Sistema operativo</span>
+                        </div>
+
+                        <hr>
+
+                        <p class="mb-1">
+                            Protocolo
+                        </p>
+
+                        <code class="text-info">
+                            WebSocket
+                        </code>
+
+                        <p class="mb-1 mt-3">
+                            Cliente
+                        </p>
+
+                        <code class="text-info">
+                            ScratchSocket CLI
+                        </code>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CARACTERÍSTICAS -->
+<section id="caracteristicas" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                ¿Qué es ScratchSocket?
+            </h2>
+
+            <p class="text-muted">
+                Una infraestructura para conectar Scratch con servicios
+                externos en tiempo real.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card socket-card h-100 shadow-sm border-0">
+
+                    <div class="card-body p-4">
+
+                        <div class="feature-icon mb-3">
+                            🔌
+                        </div>
+
+                        <h4>WebSockets</h4>
+
+                        <p class="text-muted">
+                            Comunicación bidireccional y persistente
+                            entre clientes y servidores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card socket-card h-100 shadow-sm border-0">
+
+                    <div class="card-body p-4">
+
+                        <div class="feature-icon mb-3">
+                            🛡️
+                        </div>
+
+                        <h4>Nodo de seguridad</h4>
+
+                        <p class="text-muted">
+                            Permite añadir una capa intermedia para
+                            procesar, validar y proteger las conexiones.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card socket-card h-100 shadow-sm border-0">
+
+                    <div class="card-body p-4">
+
+                        <div class="feature-icon mb-3">
+                            ⚡
+                        </div>
+
+                        <h4>Tiempo real</h4>
+
+                        <p class="text-muted">
+                            Diseñado para intercambiar información
+                            rápidamente entre Scratch y servicios externos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARQUITECTURA -->
+<section id="arquitectura" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Arquitectura
+            </h2>
+
+            <p class="text-muted">
+                Flujo básico de comunicación de ScratchSocket.
+            </p>
+
+        </div>
+
+
+        <div class="architecture shadow">
+
+<pre class="mb-0 text-white">
+┌─────────────────────┐
+│   Scratch Project   │
+│      / Client       │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│  ScratchSocket CLI  │
+│       (client)      │
+└──────────┬──────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Security / Processing Node   │
+│          (optional)          │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌─────────────────────┐
+│      Receiver       │
+│    external_cli     │
+└─────────────────────┘
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EJEMPLO -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold">
+                    Diseñado para proyectos de Scratch
+                </h2>
+
+                <p class="text-muted">
+                    ScratchSocket puede utilizarse como puente entre
+                    un proyecto de Scratch y una infraestructura externa.
+                </p>
+
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item">
+                        ✅ Comunicación cliente-servidor
+                    </li>
+
+                    <li class="list-group-item">
+                        ✅ Procesamiento intermedio opcional
+                    </li>
+
+                    <li class="list-group-item">
+                        ✅ Arquitectura modular
+                    </li>
+
+                    <li class="list-group-item">
+                        ✅ Comunicación mediante WebSocket
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-6 mt-4 mt-lg-0">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-header bg-dark text-white">
+                        Ejemplo de mensaje
+                    </div>
+
+                    <div class="card-body bg-black">
+
+<pre class="text-success mb-0">
+{
+    "type": "message",
+    "client": "scratch",
+    "data": "Hello ScratchSocket!"
+}
+</pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOCUMENTACIÓN -->
+<section id="documentacion" class="py-5 bg-primary text-white">
+
+    <div class="container text-center">
+
+        <h2 class="fw-bold">
+            Empieza con ScratchSocket
+        </h2>
+
+        <p class="lead">
+            Construye sistemas de comunicación para tus proyectos
+            de Scratch.
+        </p>
+
+        <div class="mt-4">
+
+            <button class="btn btn-light btn-lg me-2">
+                Documentación
+            </button>
+
+            <button class="btn btn-outline-light btn-lg">
+                GitHub
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="py-4">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h5 class="text-white">
+                    ScratchSocket
+                </h5>
+
+                <p>
+                    Es
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <p class="mb-0">
+                    © 2026 ScratchSocket
+                </p>
+
+                <small>
+                    Built for the Scratch community.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
